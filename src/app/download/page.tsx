@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import constants from "@/libs/constants";
 import {
   ArrowBigDownDash,
   CodeXml,
@@ -46,14 +47,14 @@ export default async function DownloadPage() {
             <CardContent className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="gap-2" size="lg" asChild>
-                  <Link href="https://github.com/JeelDobariya38/Passcodes/releases/latest">
+                  <Link href={constants.GITHUB_LATEST_RELEASE_URL}>
                     <Download className="h-5 w-5" />
                     <span className="hidden sm:inline">Download</span> Stable
                     Version
                   </Link>
                 </Button>
                 <Button variant="outline" className="gap-2" size="lg" asChild>
-                  <Link href="https://github.com/JeelDobariya38/Passcodes/releases/latest">
+                  <Link href={constants.GITHUB_LATEST_RELEASE_URL}>
                     <Download className="h-5 w-5" />
                     <span className="hidden sm:inline">Download</span> Latest
                     Version
@@ -62,13 +63,13 @@ export default async function DownloadPage() {
               </div>
               <div className="hidden sm:flex flex-col flex-row gap-4">
                 <Button variant="link" className="gap-2" size="sm" asChild>
-                  <Link href="https://github.com/PasscodesApp/Passcodes">
+                  <Link href={constants.GITHUB_REPO_URL}>
                     <CodeXml className="h-5 w-5" />
                     Source Code
                   </Link>
                 </Button>
                 <Button variant="link" className="gap-2" size="sm" asChild>
-                  <Link href="https://github.com/PasscodesApp/Passcodes/blob/main/docs/release-notes.md">
+                  <Link href={constants.RELEASE_NOTES_URL}>
                     <NotebookText className="h-5 w-5" />
                     Release Notes
                   </Link>

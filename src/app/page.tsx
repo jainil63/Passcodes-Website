@@ -21,6 +21,7 @@ import { Navigation } from "@/components/navigation";
 import Link from "next/link";
 import { ApkDownloadButton } from "@/components/apkdownloadbutton";
 import Constants from "@/libs/constants";
+import constants from "@/libs/constants";
 
 export default async function HomePage() {
   let downloadFallbackUrl = Constants.GITHUB_RELEASE_URL;
@@ -304,17 +305,13 @@ export default async function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Button variant="ghost" asChild>
-              <Link href="https://github.com/JeelDobariya38/Passcodes">
-                GitHub
-              </Link>
+              <Link href={constants.GITHUB_REPO_URL}>GitHub</Link>
             </Button>
             <Button variant="ghost" asChild>
               <Link href="/about">About</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link href="https://github.com/JeelDobariya38/Passcodes/tree/main/docs">
-                Documentation
-              </Link>
+              <Link href={constants.GITHUB_DOCS_DIR_URL}>Documentation</Link>
             </Button>
           </div>
           <div className="mt-8 pt-8 border-t text-muted-foreground text-sm">
