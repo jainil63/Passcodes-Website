@@ -22,7 +22,7 @@ npm run preview
 
 We appreciate the contribuation to website...
 
-Before, contributing to this website project, you should have knowledge of the [CONTRIBUTING.md](https://github.com/PasscodesApp/Passcodes-Docs/blob/main/CONTRIBUTING.md) & [MIT License](https://github.com/PasscodesApp/Passcodes-Docs/blob/jeel-dev/LICENSE.txt) provide in [docs repository](https://github.com/PasscodesApp/Passcodes-Docs). and also you should have basic knowledge of app repository codebase.
+Before, contributing to this website project, you should have knowledge of the [CONTRIBUTING.md](https://github.com/PasscodesApp/Passcodes-Docs/blob/main/CONTRIBUTING.md) & [MIT License](https://github.com/PasscodesApp/Passcodes-Docs/blob/main/LICENSE.txt) provide in [docs repository](https://github.com/PasscodesApp/Passcodes-Docs). and also you should have basic knowledge of app repository codebase.
 
 More info, read `README` on [Passcodes](https://github.com/PasscodesApp) github organization homepage.
 
