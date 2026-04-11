@@ -39,7 +39,7 @@ a {
     border-radius: 30px;
 
     /* Gradient button */
-    background: linear-gradient(#3e57a8, #ff416c, #3e57a8);
+    background: linear-gradient(#3e57a8, #3e57a8, #3e57a8);
 
     /* Smooth transition */
     transition: all 0.3s ease;
@@ -57,7 +57,7 @@ a:hover {
     /* Glow */
     box-shadow: 0 10px 25px rgba(255, 75, 43, 0.6);
 
-    background: linear-gradient(#3e57a8, #ff416c, #3e57a8);
+    background: linear-gradient(#3e57a8, #3e57a8 , #3e57a8);
 }
 
 /* Click effect */
@@ -93,9 +93,3 @@ nav-links {
     text-shadow: 0 0 10px rgba(249, 211, 211, 0.7);
 }
 
-.logo {
-    height: 20px;
-    width: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
