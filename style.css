@@ -39,7 +39,7 @@ a {
     border-radius: 30px;
 
     /* Gradient button */
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    background: linear-gradient(45deg, #3e57a8, #3e57a8);
 
     /* Smooth transition */
     transition: all 0.3s ease;
@@ -47,7 +47,7 @@ a {
     margin-bottom: 20px;
 
     /* Shadow */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 /* Hover effect */
@@ -55,9 +55,9 @@ a:hover {
     transform: scale(1.1) translateY(-3px);
 
     /* Glow */
-    box-shadow: 0 10px 25px rgba(255, 75, 43, 0.6);
+    box-shadow: 0 10px 25px #3e57a8(255, 75, 43, 0.6);
 
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    background: linear-gradient(45deg, #3e57a8 , #3e57a8);
 }
 
 /* Click effect */
