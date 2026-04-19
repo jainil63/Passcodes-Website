@@ -1,160 +1,164 @@
-/* Reset */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Background */
+/* =========================
+   BODY / BACKGROUND
+========================= */
 body {
     height: 100vh;
-    font-family: "Segoe UI", sans-serif;
+    padding-top: 80px; /* Prevent navbar overlap */
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 
-    /* Gradient background */
-    background: linear-gradient(135deg, #061023, #343f53);
+    font-family: "Segoe UI", sans-serif;
     color: white;
+
+    background: linear-gradient(135deg, #061023, #343f53);
 }
 
-/* Heading */
+/* =========================
+   HEADING
+========================= */
 h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     letter-spacing: 2px;
 
-    /* Glow effect */
     text-shadow:
         0 0 10px rgba(249, 211, 211, 0.7),
         0 0 20px rgba(255, 255, 255, 0.5);
+
+    animation: float 3s ease-in-out infinite;
 }
 
-/* Link as button */
+/* =========================
+   BUTTON LINK
+========================= */
 .link {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+    margin-bottom: 20px;
     padding: 12px 25px;
-    border-radius: 30px;
 
-    /* Gradient button */
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 30px;
     background: linear-gradient(45deg, #3e57a8, #3e57a8);
 
-    /* Smooth transition */
-    transition: all 0.3s ease;
-
-    margin-bottom: 20px;
-
-    /* Shadow */
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .link:hover {
     transform: scale(1.1) translateY(-3px);
 
-    /* Glow */
-    box-shadow: 0 10px 25px #3e57a8(255, 75, 43, 0.6);
-
-    background: linear-gradient(45deg, #3e57a8, #3e57a8);
+    /* FIXED invalid shadow syntax */
+    box-shadow: 0 10px 25px rgba(62, 87, 168, 0.6);
 }
 
-/* Click effect */
 .link:active {
     transform: scale(0.95);
 }
 
-/* Add subtle floating animation */
+/* =========================
+   NAVBAR
+========================= */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(6, 16, 35, 0.9);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* removed duplicate */
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px 40px;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li a {
+    padding: 8px 15px;
+
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-links li a:active {
+    transform: scale(0.92);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: 200px;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* =========================
+   GLOBAL LINKS
+========================= */
+a {
+    color: #ffffff;
+}
+
+/* =========================
+   ANIMATION
+========================= */
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
-}
-
-h1 {
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Navbar */
-.nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(6, 16, 35, 0.9);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-/* Navbar container */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-}
-
-/* Logo */
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-}
-
-/* Nav links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-/* Nav link style */
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-/* Hover effect */
-
-/* Fix body overlap due to fixed navbar */
-body {
-    padding-top: 80px;
-}
-
-.nav-links li a:active {
-    transform: scale(0.92);
-
-    /* Pressed shadow */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
-}
-
-.navbar {
-    justify-content: center;
-    display: flex;
-    gap: 20px;
-}
-
-footer {
-    margin-top: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-}
-
-a {
-    color: #ffffff;
 }
